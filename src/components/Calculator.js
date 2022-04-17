@@ -1,7 +1,24 @@
 import React from 'react';
+import { useState } from 'react';
 import './Calculator.css';
 
 function Calculator(props) {
+
+
+    const [ billAmount, setBillAmount ] = useState(0);
+    const [ percentTip, setPercentTip ] = useState(1);
+    const [ numPeople, setNumPeople ] = useState(1);
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+    }
+
+    function handleTip(tip) {
+
+        setPercentTip(tip);
+    }
+
+    
 
     return(
         <div className=''>
@@ -10,38 +27,41 @@ function Calculator(props) {
             </div>
             <div className='options'>
                 <h2>Bill</h2>
-                <form>
-                    <label>$</label>
-                    <input type='text' name='billAmount'></input>
+                <form onSubmit={onSubmit}>
+                    <label>
+                        <input type='text' name='billAmount' onChange={event => setBillAmount(event.target.value) }></input>
+                    </label>
                 </form>
                 <h2>Select Tip %</h2>
-                <form className='container'>
+                <form onSubmit={onSubmit} className='container'>
                     <div className='col'>
-                        <button>5%</button>
-                        <button>15%</button>
-                        <button>50%</button>
+                        <button onClick={() => setPercentTip(0.05)}>5%</button>
+                        <button onClick={() => handleTip(0.15)}>15%</button>
+                        <button onClick={() => handleTip(0.50)}>50%</button>
                     </div>
                     <div className='col'>
-                        <button>10%</button>
-                        <button>25%</button>
-                        <label>Custom</label>
-                        <input type='text' name='customPercent'></input>
+                        <button onClick={() => handleTip(0.1)}>10%</button>
+                        <button onClick={() => handleTip(0.25)}>25%</button>
+                        <label>
+                            <input type='text' name='customPercent'></input>
+                        </label>
                     </div>
                 </form>
                 <h2>Number of People</h2>
-                <form>
-                    <label>People</label>
-                    <input type='text' name='numPeople'></input>
+                <form onSubmit={onSubmit}>
+                    <label>
+                        <input type='text' name='numPeople'></input>
+                    </label>
                 </form>             
             </div>
             <div className='results'>
                 <div className='container'>
                     <h3>Tip Amount <br />/ person</h3>
-                    <h2>$20.20</h2>
+                    <h2>${billAmount * percentTip}</h2>
                 </div>
                 <div className='container'>
-                    <h3>Tip Amount <br />/ person</h3>
-                    <h2>$20.20</h2>
+                    <h3>Total <br />/ person</h3>
+                    <h2>${billAmount}</h2>
                 </div>
                 <button>Reset</button>  
             </div>

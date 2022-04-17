@@ -12,6 +12,8 @@
 /* Options */
 .options {
     background-color: #ffffff;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 .container {
