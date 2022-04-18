@@ -21,18 +21,55 @@
 
 
 /* Options */
+button {
+    background-color: #00474b;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    margin: 10px 10px;
+    margin-left: 0;
+	padding: 6%;
+    font-size: 1.5rem;
+    font-weight: bolder;
+	cursor: pointer;
+}
+
 h2 {
-    color: rgb(76, 100, 91);
+    color: #6d8381;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+input {
+    width: 100%;
+    height: 3rem;
+    background-color: #f3f8fb;
+    border: 0;
+    text-align: right;
+    font-family: inherit;
+    color: #00474b;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.dollar {
+    position: absolute;
+    top: 15px;
+    left: 10px;
 }
 
 .options {
     background-color: #ffffff;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 .bill {
     padding: 2% 8%;
+}
+
+.billInput {
+    position: relative;
 }
 
 .tip {

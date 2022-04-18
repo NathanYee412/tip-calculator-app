@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import './Calculator.css';
+import dollarIcon from '../img/icon-dollar.svg';
+import personIcon from '../img/icon-person.svg';
 
 function Calculator(props) {
 
@@ -69,9 +71,10 @@ function Calculator(props) {
                 <div className='bill'>
                     <h2>Bill</h2>
                     <form onSubmit={onSubmit}>
-                        <label>
+                        <div className='billInput'>
                             <input type='text' name='billAmount' onChange={event => handleBillAmount(event.target.value) }></input>
-                        </label>
+                            <img src={dollarIcon} alt='dollar icon' className='dollar'></img>
+                        </div>
                     </form>
                 </div>
                 <div className='tip'>
@@ -86,7 +89,7 @@ function Calculator(props) {
                             <button onClick={() => handleTip(0.1)}>10%</button>
                             <button onClick={() => handleTip(0.25)}>25%</button>
                             <label>
-                                <input type='text' name='customPercent' onChange={event => handleCustomTip(event.target.value)}></input>
+                                <input type='text' name='customPercent' placeholder='Custom' onChange={event => handleCustomTip(event.target.value)}></input>
                             </label>
                         </div>
                     </form>
@@ -94,9 +97,10 @@ function Calculator(props) {
                 <div className='people'>
                     <h2>Number of People</h2>
                     <form onSubmit={onSubmit}>
-                        <label>
+                        <div className='billInput'>
                             <input type='text' name='numPeople' onChange={event => handleNumPeople(event.target.value)}></input>
-                        </label>
+                            <img src={personIcon} alt='person' className='dollar'></img>
+                        </div>
                     </form>    
                 </div>         
                 <div className='results'>
