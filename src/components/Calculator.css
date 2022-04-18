@@ -76,6 +76,11 @@ input {
     padding: 2% 8%;
 }
 
+.customTip {
+    margin-top: 9px;
+    width: 90%;
+}
+
 .people {
     padding: 2% 8%;
 }

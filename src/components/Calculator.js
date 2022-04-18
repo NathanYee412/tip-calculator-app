@@ -89,7 +89,7 @@ function Calculator(props) {
                             <button onClick={() => handleTip(0.1)}>10%</button>
                             <button onClick={() => handleTip(0.25)}>25%</button>
                             <label>
-                                <input type='text' name='customPercent' placeholder='Custom' onChange={event => handleCustomTip(event.target.value)}></input>
+                                <input className='customTip' type='text' name='customPercent' placeholder='Custom' onChange={event => handleCustomTip(event.target.value)}></input>
                             </label>
                         </div>
                     </form>
