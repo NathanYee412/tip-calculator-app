@@ -9,13 +9,6 @@
     padding: 5% 5%;
 }
 
-/* Options */
-.options {
-    background-color: #ffffff;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-}
-
 .container {
     display: flex;
 }
@@ -26,8 +19,33 @@
     width: 50%;
 }
 
+
+/* Options */
+h2 {
+    color: rgb(76, 100, 91);
+}
+
+.options {
+    background-color: #ffffff;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.bill {
+    padding: 2% 8%;
+}
+
+.tip {
+    padding: 2% 8%;
+}
+
+.people {
+    padding: 2% 8%;
+}
+
 /* Results */
 
 .results {
     background-color: #00474b;
+    padding: 2% 8%;
 }
