@@ -11,6 +11,7 @@
 
 .container {
     display: flex;
+    justify-content: center;
 }
 
 .col {
@@ -89,5 +90,21 @@ input {
 
 .results {
     background-color: #00474b;
-    padding: 2% 8%;
+    border-radius: 20px;
+    width: 83%;
+    margin-top: 20px;
+}
+
+.output {
+    display: flex;
+    padding: 0 10%;
+}
+
+h3 {
+    color: white;
+}
+
+.reset {
+    justify-content: center;
+    background-color: green;
 }
