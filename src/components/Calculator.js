@@ -106,14 +106,16 @@ function Calculator(props) {
                 <div className='container'>
                     <div className='results'>
                         <div className='output'>
-                            <h3>Tip Amount <br />/ person</h3>
+                            <h3>Tip Amount <span className='perPerson'><br />/ person</span></h3>
                             <h3>${billAmount * percentTip / numPeople}</h3>
                         </div>
                         <div className='output'>
-                            <h3>Total <br />/ person</h3>
+                            <h3>Total <span className='perPerson'><br />/ person</span></h3>
                             <h3>${totalPerPerson}</h3>
                         </div>
-                        <button className='reset' onClick={() => reset()}>Reset</button>  
+                        <div className='reset'>
+                            <button className='resetButton' onClick={() => reset()}>Reset</button>
+                        </div>  
                     </div>
                 </div>
             </div>

@@ -86,6 +86,10 @@ input {
     padding: 2% 8%;
 }
 
+.perPerson {
+    color: #558180;
+}
+
 /* Results */
 
 .results {
@@ -93,6 +97,7 @@ input {
     border-radius: 20px;
     width: 83%;
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .output {
@@ -101,10 +106,19 @@ input {
 }
 
 h3 {
-    color: white;
+    color: #e9f8fb;
 }
 
 .reset {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    background-color: green;
+    margin-bottom: 10px;
+}
+
+.resetButton {
+    justify-content: center;
+    background-color: #26c2ad;
+    width: 83%;
+    padding: 10px;
 }
